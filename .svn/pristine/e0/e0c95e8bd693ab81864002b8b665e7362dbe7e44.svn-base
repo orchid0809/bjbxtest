@@ -1,0 +1,16 @@
+log4j.rootLogger=off,console
+
+
+#log4j.logger.org.hibernate.engine.QueryParameters=DEBUG
+#log4j.logger.org.hibernate.engine.query.HQLQueryPlan=DEBUG
+#log4j.logger.org.hibernate.type=trace
+
+#log4j.logger.org.springframework.security=debug
+
+# 应用于控制台
+log4j.appender.console = org.apache.log4j.ConsoleAppender
+log4j.appender.console.Target = System.out
+log4j.appender.console.Threshold=trace	
+log4j.appender.console.layout = org.apache.log4j.PatternLayout
+log4j.appender.console.layout.ConversionPattern = %d{ABSOLUTE} %5p %c{1}\:%L - %m%n
+

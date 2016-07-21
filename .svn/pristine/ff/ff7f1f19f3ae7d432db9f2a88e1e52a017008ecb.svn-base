@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors tuyunkun
+ * @date    2016-06-23 17:00:00
+ * @version login.css + register.css
+ */
+/* logo */
+.logo-area{ margin-top: 33px; height: 75px; overflow: hidden;}
+.logo{ float: left; margin-right: 26px; width: 187px; height: 71px; background: url("../images/logo.png") no-repeat;}
+.logo a{ display: block; width: 187px; height: 71px; text-indent: -9999px;}
+.logo-area .blue{ float: left; margin-top: 12px; height: 40px; line-height: 40px; padding-left: 36px; border-left: 1px solid #c0c0c0; color: #007ece; text-decoration: underline;}
+
+/* login 登录 */
+.login-area{ width: 950px; height: 335px; margin:40px auto; background: url(../images/loging-img-bg.jpg) 0 50% no-repeat;}
+.h{ height: 100%;}
+.login-form{ float: right; width: 350px; height: 330px; border: 1px solid #dddddd; clear: both; overflow: hidden; text-align: left; background: #ffffff;}
+.login-form h3{ padding-top: 30px; margin:auto; width: 300px; font-size: 16px; font-weight: 700; letter-spacing: 1px;}
+.login-form .form{ margin:auto; width: 300px; }
+.login-form .user,.login-form .pass{height: 40px; border: 1px solid #ddd; letter-spacing:-0.34em; background: #ffffff;}
+.login-form .user{ margin-top: 30px;}
+.login-form .pass{ margin-top: 20px;}
+.login-form .user:hover,.login-form .pass:hover,.login-form .hover{ border: 1px solid #fe1111; color: #333;}
+
+.login-form i,.login-form input{display:inline-block; *display:inline; *zoom:1; vertical-align: top; letter-spacing: normal;}
+.login-form i{ width: 40px; height: 40px;}
+.login-form .user i{background: #ddd url("../images/login-icon1.png") 50% 50% no-repeat;}
+.login-form .pass i{background: #ddd url("../images/login-icon2.png") 50% 50% no-repeat;}
+.login-form .user input,.login-form .pass input{ width: 240px; height: 40px; line-height: 40px; padding-left: 10px; padding-right: 6px; border: none; background: none; color: #999999; font-family:"Microsoft YaHei"; font-size: 14px; }
+.login-form .link{ margin-top: 30px; clear: both; overflow: hidden;}
+.login-form .link a{color:#6c6c6c;}
+.login-form .link a:hover{color: #0096ff;}
+.login-form .btn{ display: block; margin-top: 20px; width: 300px; height: 42px; background: #d43225; border: 1px solid #d43225; border-radius: 4px; color: #ffffff; font-size: 16px; font-family:"Microsoft YaHei";}
+
+/* 底部 */
+.bottom-area{ width: 550px; height: 30px; margin:20px auto;}
+.bottom-area em{display:inline-block; *display:inline; *zoom:1; vertical-align: middle; letter-spacing: normal; padding-left: 40px; margin-right: 30px; height: 30px; line-height: 30px;}
+.bottom-area .icon1{ background: url("../images/login-icon4.png") 0 50% no-repeat;}
+.bottom-area .icon2{ background: url("../images/login-icon5.png") 0 50% no-repeat;}
+.bottom-area .icon3{ background: url("../images/login-icon6.png") 0 50% no-repeat;}
+.copyright{ padding-bottom: 100px;}
+.copyright p{ padding-top: 20px; text-align: center; color: #777777;}
+
+/* User register  用户注册 */
+.reg-area{ width: 1030px; height: 500px; margin:0px auto 20px; background: url(../images/reg-bg.png) 0 100% no-repeat;}
+.h{ height: 100%;}
+.reg-form{ float: right; width: 460px; height: 500px; border: 1px solid #dddddd; clear: both; overflow: hidden; text-align: left; background: #ffffff;}
+.reg-form .tit{width: 416px; height: 60px; margin:auto; border-bottom: 1px solid #cdcfd1; text-align: center;}
+.reg-form h3{ position: relative; margin-top: 24px; padding-left: 10px; padding-right: 10px; height: 35px; font-size: 16px; font-weight: 700; letter-spacing: 1px; border-bottom: 2px solid #d43225; display:inline-block; *display:inline; *zoom:1; vertical-align: top; }
+.reg-form .form{ margin:30px auto 0; width: 416px; }
+.reg-form .form div{ margin-bottom: 20px; height: 42px; overflow: hidden; letter-spacing: -0.34em;}
+.reg-form .form label,.reg-form .form div input,.reg-form .form img,.reg-form .form span{display:inline-block; *display:inline; *zoom:1; vertical-align: middle; letter-spacing: normal;}
+.reg-form .form label{ padding-right: 15px; width: 75px; text-align: right;font-family:"Microsoft YaHei";}
+.reg-form input{height: 40px; line-height: 40px; padding-left: 10px; padding-right: 6px; color: #999999; font-family:"Microsoft YaHei"; font-size: 14px; border: 1px solid #ddd; background: #ffffff;}
+.reg-form .tel input,.reg-form .pass input{ width: 270px; }
+.reg-form .lzm input{width: 105px;}
+.reg-form .lzm img{ margin-left: 10px;}
+.reg-form .lzm span{ margin-left: 10px; color: #888888;}
+.reg-form .lzm span.blue{ color: #296dbe;}
+.reg-form .form .agree{ margin: -5px 0 0 0; height: 20px;}
+.reg-form .form .agree label{ width: 416px; text-align: left; padding: 0; color: #999999;}
+.reg-form .form .agree input{ margin-left: 6px; margin-right: 6px; height: 20px; line-height: 20px; padding: 0; border: 1px solid #ddd; background: #ffffff;}
+.reg-form .form .agree a{ color: #296dbe;}
+.reg-form .btn{ display: block; margin-top: 20px; width: 416px; height: 42px; background: #d43225; border: 1px solid #d43225; border-radius: 4px; color: #ffffff; font-size: 16px; font-family:"Microsoft YaHei";}
+
+/* password 找回密码 */
+.password-area{ width: 402px; margin:40px auto;}
+.password-form{ padding-bottom: 40px; text-align:left; border: 1px solid #dddddd; background: #ffffff; clear: both; overflow: hidden;}
+.password-form h3{ padding-top: 24px; margin:auto; width: 350px; height: 36px; font-size: 16px; font-weight: 700; letter-spacing: 1px;}
+.password-form .form{ margin:auto; width: 350px; }
+.password-form div{ margin-bottom: 20px; height: 42px; overflow: hidden;}
+.password-form input{height: 40px; line-height: 40px; padding-left: 10px; padding-right: 6px; color: #999999; font-family:"Microsoft YaHei"; font-size: 14px; border: 1px solid #ddd; background: #ffffff;}
+.password-form .tel input:hover,.password-form .lzm input:hover,.password-form .tel-lzm input:hover,.password-form .pass:hover{ border: 1px solid #fe1111; color: #333;}
+.password-form .tel input{ width: 332px; }
+.password-form .lzm{letter-spacing: -0.34em;}
+.password-form .lzm input,.password-form .lzm img,.password-form .lzm span{display:inline-block; *display:inline; *zoom:1; vertical-align: middle; letter-spacing: normal;}
+.password-form .lzm input{ width: 120px; }
+.password-form .lzm img{ margin-left: 12px;}
+.password-form .lzm span{ margin-left: 12px; color: #888888;}
+.password-form .tel-lzm{letter-spacing: -0.34em;}
+.password-form .tel-lzm input,.password-form .tel-lzm span{display:inline-block; *display:inline; *zoom:1; vertical-align: middle; letter-spacing: normal;}
+.password-form .tel-lzm input{ width: 120px; }
+.password-form .tel-lzm span{ margin-left: 12px; width: 130px; height: 36px; border: 1px solid #aaaaaa; background: #ececec; color: #888888; line-height: 36px; text-align: center;}
+.password-form .pass{height: 40px; border: 1px solid #ddd; }
+.password-form .pass i,.password-form .pass input{display:inline-block; *display:inline; *zoom:1; vertical-align: top; letter-spacing: normal;}
+.password-form .pass i{width: 40px; height: 40px;background: #ddd url("../images/login-icon2.png") 50% 50% no-repeat;}
+.password-form .pass input{ width: 240px; height: 40px; line-height: 40px; padding-left: 10px; padding-right: 6px; border: none; background: none; color: #999999; font-family:"Microsoft YaHei"; font-size: 14px; }
+.password-form .btn{ display: block; margin-top: ３0px; width: 350px; height: 42px; background: #d43225; border: 1px solid #d43225; border-radius: 4px; color: #ffffff; font-size: 16px; font-family:"Microsoft YaHei";}
+
+

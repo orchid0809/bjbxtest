@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors tuyunkun
+ * @date    2016-06-23 17:00:00
+ * @version 整站通用样式  顶部 + 底部 + 导航
+ */
+
+/* top area */
+.top-area{ height: 30px; line-height: 30px; background: #fafafa; border-bottom: 1px solid #ededed;}
+.top-area a{ line-height: 30px; display:inline-block; *display:inline; *zoom:1; vertical-align: top; letter-spacing: normal;}
+
+.top-area .fl a{ display: block; height: 30px; padding-left: 16px; background: url(../images/top-icon1.png) 0 50% no-repeat;}
+.top-area .fr .red{padding-left: 12px; padding-right: 12px; color: #d43225;}
+.top-area .fr .pl18{ padding-left: 18px;}
+.drop-down{position: relative; width: 98px;}
+.drop-down .option{display: block; width: 98px; cursor: pointer;text-align: center;}
+.drop-down .hover,.drop-down .on{width: 96px; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; background: #fff;}
+.drop-down i{ display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; margin-left: 3px; width: 10px; height: 10px; background:url(../images/top-icon2.png) 50% 50% no-repeat; transition: transform .1s ease-in 0s; -webkit-transition: -webkit-transform .1s ease-in 0s;}
+.drop-down:hover i{transform: rotate(180deg); -webkit-transform: rotate(180deg);}
+.drop-down .on i{background:url(../images/top-icon2-on.png) 50% 50% no-repeat;}
+.drop-down .menu{display: none; position: absolute; top: 30px; left: 0px; width: 96px; margin:auto; padding-top: 5px; padding-bottom: 5px;  border: 1px solid #e5e5e5; border-top: none; background: #fff; overflow: hidden;letter-spacing: normal; z-index:10;}
+.drop-down .menu li{padding-left: 15px; line-height: 33px;cursor: pointer; }
+
+/* logo + search  网站LOGO + 搜索 */
+.logo-search{ height: 130px;}
+.logo-tit{ width: 190px;}
+.logo-tit h1{ height: 130px; background: url(../images/logo.png) 50% 50% no-repeat; text-indent: -9999px; font-size: 0;}
+
+.search-area{ margin-top: 30px; width: 500px;}
+.search-area form{width: 500px; height: 36px; background: #d43225;}
+.search-area .search-box{ margin:2px 0 0 2px; *margin:1px 0 0 2px; padding-left: 10px; padding-right: 10px; width: 375px; height: 32px; line-height: 32px; font-size: 14px; font-family:"Microsoft YaHei",sans-serif; color: #555; border: none; background: #fff;}
+.search-area .search-btn{ padding-left: 30px; width: 100px; height: 36px; color: #ffffff; font-size: 16px; font-family:"Microsoft YaHei",sans-serif; background: url(../images/index-icon1.png) 20px 50% no-repeat; border: none; cursor: pointer;}
+.search-area .link{ clear: both; margin-top: 10px;}
+.search-area .link a{ padding-right: 15px; color:#333;}
+.search-area .link a:hover{color: #f4103b; }
+
+.shop-car{ position: relative;z-index: 6; margin-top: 30px;}
+.shop-car .car{ display: block; position: relative; top: 0; z-index: 1; width: 170px; height: 36px; line-height: 36px; background: #fff;  border: 1px solid #dfdfdf; color: #d43225; cursor: pointer;}
+.shop-car .car b{ display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; margin-left: 15px; margin-right: 15px; width: 22px; height: 36px; background:url(../images/index-icon2.png) 0 7px no-repeat; }
+.shop-car .car i{ display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; margin-left: 3px; width: 10px; height: 10px; background:url(../images/top-icon2.png) 50% 50% no-repeat; transition: transform .1s ease-in 0s; -webkit-transition: -webkit-transform .1s ease-in 0s;}
+.shop-car:hover i{transform: rotate(180deg); -webkit-transform: rotate(180deg);}
+.shop-car .on i{background:url(../images/top-icon2-on.png) 50% 50% no-repeat;}
+.shop-car .hover,.shop-car .on{height: 38px; border-bottom: none;  -moz-box-shadow: 0 0 5px #ddd; -webkit-box-shadow: 0 0 5px #ddd; box-shadow: 0 0 5px #ddd;}
+/*.shop-car .hover,.shop-car .on{height: 38px; border-bottom: none; -moz-box-shadow: 0 -2px 1px #eee; -webkit-box-shadow: 0 -2px 1px #eee; box-shadow: 0 -2px 1px #eee;}*/
+.shop-car .spacer{position: absolute; z-index: 2; right: 0; top: -4px; width: 170px; height: 12px; background: #fff;}
+.shop-list{ display: none; position: absolute; top: 38px; right: 0; min-width: 320px; border: 1px solid #dfdfdf; background: #ffffff; text-align: left; -moz-box-shadow: 0 0 5px #ddd; -webkit-box-shadow: 0 0 5px #ddd; box-shadow: 0 0 5px #ddd;}
+.shop-list ul{ width: 520px;}
+.shop-list li{ padding:12px 8px 12px 12px;border-bottom: 1px dashed #e4e4e4; overflow: hidden; letter-spacing:-0.34em;text-align: left;}
+.shop-list .pic { width: 40px; height: 40px; border: 1px solid #e4e4e4; text-align: center; overflow: hidden;}
+.shop-list .pic img { max-width: 40px; max-height: 40px; vertical-align: middle; overflow: hidden;}
+* html .shop-list .pic img { width: expression(this.width > 40 && this.width > this.height ? 40:auto); height: expression(this.height > 40 ? 40:auto); }
+.shop-list .pic i { height: 100%; display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; letter-spacing: normal;}
+.shop-list .tit{ padding-left: 12px; width: 240px; font-size: 12px;font-family:Simsun, sans-serif;}
+.shop-list .tit h1{ color: #007ece;  clear: both; overflow: hidden;}
+.shop-list .tit span{ display: block; padding-top: 8px; color: #999999; font-family:Arial, sans-serif;}
+.shop-list .tit span b{ padding-left: 5px; padding-right: 10px; color: #333333;}
+.shop-list .price{ width: 110px; font-size: 16px; font-family:Arial, sans-serif; color: #d43225; text-align: center; }
+.shop-list .count{ width: 90px; font-size: 12px;font-family:Simsun, sans-serif; text-align: center;}
+.shop-list .count span{display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; letter-spacing: normal; width: 15px; height: 15px; cursor: pointer;}
+.shop-list .count .minus{ background: url(../images/minus-icon.png) 50% 50% no-repeat;}
+.shop-list .count .add{ background: url(../images/add-icon.png) 50% 50% no-repeat;}
+.shop-list .count .textbox{ margin:0 6px; width: 38px; height: 18px; line-height: 18px; border: 1px solid #cacbcb; text-align: center; font-size: 12px;}
+.shop-list .count em{ display: block; padding-top: 6px; color: #007ece; letter-spacing: 2px; font-family:Simsun, sans-serif;}
+.shop-list .total{ padding-left: 12px; padding-right: 12px; height: 36px; background: #efefef; clear: both; overflow: hidden; font-size: 14px;}
+.shop-list .total span{ float: left; color: #666666; line-height: 36px;}
+.shop-list .total span i{ padding-left: 4px; padding-right: 4px; font-family:Arial, sans-serif; color: #d43225;}
+.shop-list .total .btn{ float: right; margin-top: 5px; padding:4px 16px; background: #d43225; color: #ffffff; }
+.shop-list .no-goods{padding:20px 30px; height: 49px; line-height: 49px; overflow: hidden; color: #999;}
+.shop-list .no-goods b{display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; letter-spacing: normal;  width: 57px; height: 49px; background: url(../images/settleup-nogoods.png) 0 50% no-repeat;}
+
+/* 导航 */
+.nav-bg{ height: 52px; background: #d43225;}
+.nav-area{ font-size: 22px; color: #ffffff;}
+.nav-area a{color: #ffffff;}
+.nav-area a:hover{color:#fff10e}
+.nav-area .sort{ width: 200px; height: 52px; line-height: 52px; text-align: center; background: #af1509;}
+.nav-list{letter-spacing:-0.34em; margin-left:50px; margin-right: 90px; *margin-left:40px; *margin-right: 75px;}
+.nav-list li{display:inline-block; *display:inline; *zoom:1; vertical-align: middle; letter-spacing: normal;  height: 52px; line-height: 52px;}
+.nav-list li a{padding-left: 30px; padding-right: 30px;}
+.nav-area .zc{ position: relative; padding-left: 40px; width:90px; height: 52px; line-height: 52px; background: url(../images/index-icon3.png) 0 50% no-repeat;}
+.nav-area .tmq{ position: relative; margin-left: 30px; padding-left: 40px; width:110px; height: 52px; line-height: 52px; background: url(../images/index-icon4.png) 0 50% no-repeat;}
+.nav-area .zc i,.nav-area .tmq i{ position: absolute; top: -4px; right: 8px; width: 37px; height: 21px; background: url(../images/index-icon5.png) no-repeat;}
+
+/* 底部 服务信息 */
+.helper-bg{ margin-top: 118px; height: 310px; background: #ffffff; border-top: 1px solid #bfbfbf; overflow: hidden;}
+.helper-area{ margin-top: 47px;}
+.helper-list li{display:inline-block; *display:inline; *zoom:1; vertical-align: top; letter-spacing: normal; margin-right: 90px; width: 100px; text-align: center; overflow: hidden;}
+.helper-list li i{ display: block; height: 98px; margin-bottom: 20px; overflow: hidden;}
+.helper-list li i.icon1{ background: url(../images/bottom-icon1.png) 50% 0 no-repeat;}
+.helper-list li i.icon2{ background: url(../images/bottom-icon2.png) 50% 0 no-repeat;}
+.helper-list li i.icon3{ background: url(../images/bottom-icon3.png) 50% 0 no-repeat;}
+.helper-list li i.icon4{ background: url(../images/bottom-icon4.png) 50% 0 no-repeat;}
+.helper-list li i.icon5{ background: url(../images/bottom-icon5.png) 50% 0 no-repeat;}
+.helper-list li a{ display: block; line-height: 26px; color: #777777;}
+.helper-list li a:hover{color: #d43225;}
+.helper-list li em,.helper-list li em a{ display: block; font-weight: 600; color: #565656;}
+.helper-list li em{ padding-bottom: 5px;}
+.helper-area .rwm-img{ margin-left: 80px;}
+
+.footer-bg{ height: 180px; background: #dddddd; overflow: hidden;}
+.footer-area{ padding-top: 40px; font-size: 12px; color: #777777;}
+.footer-area .logo{ margin-right: 66px; width: 180px; height: 60px; text-indent: -9999px; background: url(../images/index-bottom-logo.png) 0 0 no-repeat;}
+.footer-area a{color: #777777;}
+.footer-area a:hover{color: #d43225;}
+.bottom-nav{ display: block; padding-bottom: 15px;}
+.bottom-nav a{ padding-left: 10px; padding-right: 10px;}
+.copyright{ display: block; padding-left: 10px; padding-bottom: 20px;}
+.bottom-img-link{ display: block; float: right; height: 40px; clear: both; overflow: hidden;}
+.bottom-img-link img{ float: left; margin-left: 10px;}

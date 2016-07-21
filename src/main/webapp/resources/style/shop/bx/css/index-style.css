@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors tuyunkun
+ * @date    2016-06-28 10:30:00
+ * @version 首页样式
+ */
+
+body{ background: #ffffff url(../images/index-bg.png) 0 0;}
+
+/* column-nav 栏目图标导航 */
+.top-banner{ height: 950px; background: url(../images/index-banner.jpg) 50% 0 no-repeat; overflow: hidden;}
+.column-nav{ margin-top: 668px; height: 280px; overflow: hidden;}
+.column-nav ul{width:1068px; margin:auto; text-align: justify; *text-justify:inter-ideograph; overflow: hidden; letter-spacing:-0.34em;}
+.column-nav li{display:inline-block; *display:inline; *zoom:1; vertical-align: top; letter-spacing: normal;}
+.column-nav li a{ display: block; width: 188px; height: 280px;  text-align: center; font-size: 25px; overflow: hidden;}
+.column-nav li a i{ display: block; margin-top: 210px; height: 10px; background: url(../images/index-icon6.png) 50% 0 no-repeat; overflow: hidden;}
+.column-nav li a em{ display: block; margin-top: 18px; }
+.column-nav li .icon1{background: url(../images/index-nav-icon1.png) no-repeat;}
+.column-nav li .icon2{background: url(../images/index-nav-icon2.png) no-repeat;}
+.column-nav li .icon3{background: url(../images/index-nav-icon3.png) no-repeat;}
+.column-nav li .icon4{background: url(../images/index-nav-icon4.png) no-repeat;}
+
+/* hot list 热门商品 */
+.hot-list{ position: relative; clear: both; overflow: hidden; margin: 100px auto 0; padding:28px 26px 28px 8px; width: 1162px; height: 300px; border: 1px solid #dfdfdf; background: #ffffff;}
+.hot-list li{ float: left; padding-left: 20px; width: 270px; height: 300px;}
+.hot-list li a{ display: block; position: relative; color: #ffffff;}
+.hot-list li h1{ position: absolute; bottom: 15px; left: 0; right: 0; width: 270px; height: 26px; font-size: 20px; text-align: center; overflow: hidden;}
+.list li a:hover {-webkit-opacity: 0.7; -khtml-opacity: .7; -moz-opacity: .7; opacity: .7; filter: alpha(opacity=70);}
+
+/* column-tit 栏目标题 */
+.column-tit-bg{margin-top: 160px; height: 126px; background: #d43225;}
+.column-tit{ position: relative; height: 126px; }
+.column-tit h2{ position: absolute; left: 0; bottom: 0; text-indent: -9999px;}
+.column-tit .icon1{width: 686px; height: 215px; background: url(../images/nxg-tit-img.png) no-repeat;}
+.column-tit .icon2{width: 675px; height: 225px; background: url(../images/rxg-tit-img.png) no-repeat;}
+.column-tit .icon3{width: 698px; height: 209px; background: url(../images/txg-tit-img.png) no-repeat;}
+.column-tit .icon4{width: 695px; height: 228px; background: url(../images/mzg-tit-img.png) no-repeat;}
+.column-tit .tit-img1{ position: absolute; right: 120px; bottom: 40px; width: 280px; height: 129px; background:url("../images/index-img-bg1.png") no-repeat;}
+.column-tit .tit-img2{ position: absolute; right: 120px; bottom: 40px; width: 333px; height: 157px; background:url("../images/index-img-bg2.png") no-repeat;}
+.column-tit .more{ float: right; margin-right: 30px; width: 108px; height: 126px; background: url(../images/index-more.png) 0 50% no-repeat; text-indent: -9999px;}
+.f0{display: block; text-indent: -9999px; font-size: 0;}
+
+/* column content 栏目内容列表 */
+.column-content{ padding: 40px 40px 55px 40px;  margin: 75px auto 0; width: 1118px;  border: 1px solid #dfdfdf; background: #ffffff; clear: both; overflow: hidden;}
+.column-content a{color: #888888;}
+.column-content a:hover{color: #000;}
+.column-content .pic a:hover {-webkit-opacity: 0.7; -khtml-opacity: .7; -moz-opacity: .7; opacity: .7; filter: alpha(opacity=70);}
+.column-content .max-area,.column-content .min-area{ transition: transform .1s ease-in 0s; -webkit-transition: -webkit-transform .1s ease-in 0s;}
+
+.max-area{ position: relative; width: 640px;}
+.max-area .pic{ width: 640px; height: 575px; overflow: hidden;}
+.max-area .tit{ position: absolute; top: 0; width: 370px;}
+.max-area .tit i{ position: absolute; width: 13px; height: 26px; }
+.max-area:hover .tit i{transform: rotate(180deg); -webkit-transform: rotate(180deg);}
+.max-area .tit h1{ width: 370px; font-size: 26px; color: #888888;}
+.max-area:hover .tit h1 a{ color: #000;}
+.max-area .tit:hover h1 i{transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+.max-area .tit div{ padding-top: 10px; font-size: 20px; color: #888888;}
+.max-area .tit div b{ padding-left: 10px; padding-right: 10px; font-family:Arial, sans-serif;}
+.max-area .tit div em{ font-size: 36px; font-family:Arial, sans-serif; color: #c20e27;}
+.max-area .tit-right{right: -478px; padding-left: 50px;}
+.max-area .tit-right i{ top: 5px; left: 10px; background: url(../images/arrow-l.png) no-repeat;}
+.max-area .tit-left{ left: -473px; padding-right: 50px;}
+.max-area .tit-left i{top: 6px; right: 20px; background: url(../images/arrow-r.png) no-repeat;}
+
+.min-area{ width: 420px; overflow: hidden; transition: transform .1s ease-in 0s; -webkit-transition: -webkit-transform .1s ease-in 0s;}
+.min-area .pic{ margin-top: 102px; width: 420px; height: 374px; overflow: hidden;}
+.min-area .tit{ position: relative; margin-top: 20px; padding-left: 50px; width: 370px; }
+.min-area .tit i{ position: absolute; top: 10px; left: 10px; width: 26px; height: 13px; background: url(../images/arrow-t.png) no-repeat;}
+.min-area:hover .tit i{transform: rotate(90deg); -webkit-transform: rotate(90deg);}
+.min-area .tit:hover h1 i{transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+.min-area .tit h1{ width: 370px; height: 35px; font-size: 26px; color: #888888; overflow: hidden;}
+.min-area:hover .tit h1 a{ color: #000;}
+.min-area .tit div{ padding-top: 10px; font-size: 20px; color: #888888;}
+.min-area .tit div b{ padding-left: 10px; padding-right: 10px; font-family:Arial, sans-serif;}
+.min-area .tit div em{ font-size: 30px; font-family:Arial, sans-serif; color: #c20e27;}
+
+.column-list{ padding-top: 24px; clear: both; overflow: hidden; letter-spacing:-0.34em; margin-left: -42px;}
+.column-list li{display:inline-block; *display:inline; *zoom:1; vertical-align: top; letter-spacing: normal; margin-left: 42px; margin-top: 44px; width: 247px; color: #888888;}
+.column-list li img{ display: block; width: 247px; height: 247px; overflow: hidden; margin-bottom: 18px;}
+.column-list li div{ height: 100px; text-align: center; background: #f9f9f9;}
+.column-list li h1{ padding: 18px 10px 0 10px; height: 24px; font-size: 18px; overflow: hidden;}
+.column-list li p{padding-top: 10px; font-family:Arial, sans-serif;}
+.column-list li p b{ padding-left: 5px; padding-right: 5px; font-size: 20px;}
+.column-list li p em{ font-size: 26px; color: #c20e27;}
+.column-list li:hover img {-webkit-opacity: 0.7; -khtml-opacity: .7; -moz-opacity: .7; opacity: .7; filter: alpha(opacity=70);}
+.column-list li:hover h1 a{ color: #000000;}
+

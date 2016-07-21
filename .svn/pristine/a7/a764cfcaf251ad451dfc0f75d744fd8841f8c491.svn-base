@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <title>聚雅堂</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="title" content="">
+  <meta name="robots" content="index, follow"/>
+  <meta name="googlebot" content="index, follow"/>
+  <link href="$!webPath/resources/style/shop/bx/css/base-style.css" rel="stylesheet" type="text/css">
+  <link href="$!webPath/resources/style/shop/bx/css/common.css" rel="stylesheet" type="text/css">
+  <link href="$!webPath/resources/style/shop/bx/css/index-style.css" rel="stylesheet" type="text/css">
+  <script src="$!webPath/resources/js/bx/jquery-1.12.2.min.js" type="text/javascript"></script>
+  <script src="$!webPath/resources/js/bx/common.js" type="text/javascript"></script>
+</head>
+<body>
+$!httpInclude.include("/top.htm")
+$!httpInclude.include("/head.htm")
+$!httpInclude.include("/nav.htm")
+<div class="wrapper top-banner">
+  <div class="layout column-nav">
+    <ul>
+      <li><a class="icon1" href="#nxg"><i></i><em>男鞋馆</em></a></li>
+      <li><a class="icon2" href="#rxg"><i></i><em>女鞋馆</em></a></li>
+      <li><a class="icon3" href="#txg"><i></i><em>童鞋馆</em></a></li>
+      <li><a class="icon4" href="#mzg"><i></i><em>民族馆</em></a></li>
+      <li class="last-justify"></li>
+    </ul>
+  </div>
+</div>
+<div class="layout">
+  <ul class="hot-list list">
+    <li><a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/270_300.jpg" alt="" width="270" height="300"><h1>舒适百搭帆布鞋</h1></a></li>
+    <li><a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/270_300.jpg" alt="" width="270" height="300"><h1>舒适百搭帆布鞋</h1></a></li>
+    <li><a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/270_300.jpg" alt="" width="270" height="300"><h1>舒适百搭帆布鞋</h1></a></li>
+    <li><a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/270_300.jpg" alt="" width="270" height="300"><h1>舒适百搭帆布鞋</h1></a></li>
+  </ul>
+</div>
+<div class="wrapper column-tit-bg">
+  <div class="layout column-tit">
+    <h2 class="icon1"><a name="nxg">男鞋馆</a></h2>
+    <i class="tit-img1"></i>
+    <a href="javascript:;" class="more">更多</a>
+  </div>
+</div>
+<div class="column-content">
+  <div class="fl max-area">
+    <div class="pic"><a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/640_575.jpg" width="640" height="575"></a></div>
+    <div class="tit tit-right">
+      <h1><i></i><a href="javascript:;">夏季低帮帆布鞋休闲鞋</a></h1>
+      <div>新品特惠：<b>¥</b><em>158.00</em></div>
+    </div>
+  </div>
+  <div class="fr min-area">
+    <div class="pic"><a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/420_374.jpg" width="420" height="374"></a></div>
+    <div class="tit">
+      <h1><i></i><a href="javascript:;">夏季低帮帆布鞋休闲鞋</a></h1>
+      <div>新品特惠：<b>¥</b><em>158.00</em></div>
+    </div>
+  </div>
+  <ul class="column-list">
+    <li>
+    <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+    <div>
+      <h1><a href="">2016春新款休闲布鞋</a></h1>
+      <p><b>¥</b><em>158.00</em></p>
+    </div>
+  </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="wrapper column-tit-bg">
+  <div class="layout column-tit">
+    <h2 class="icon2"><a name="rxg">女鞋馆</a></h2>
+    <i class="tit-img2"></i>
+    <a href="javascript:;" class="more">更多</a>
+  </div>
+</div>
+<div class="column-content">
+  <div class="fl min-area">
+    <div class="pic"><a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/420_374.jpg" width="420" height="374"></a></div>
+    <div class="tit">
+      <h1><i></i><a href="javascript:;">夏季低帮帆布鞋休闲鞋</a></h1>
+      <div>新品特惠：<b>¥</b><em>158.00</em></div>
+    </div>
+  </div>
+  <div class="fr max-area">
+    <div class="pic"><a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/640_575.jpg" width="640" height="575"></a></div>
+    <div class="tit tit-left">
+      <h1><i></i><a href="javascript:;">夏季低帮帆布鞋休闲鞋</a></h1>
+      <div>新品特惠：<b>¥</b><em>158.00</em></div>
+    </div>
+  </div>
+  <ul class="column-list">
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="wrapper column-tit-bg">
+  <div class="layout column-tit">
+    <h2 class="icon3"><a name="txg">童鞋馆</a></h2>
+    <i class="tit-img1"></i>
+    <a href="javascript:;" class="more">更多</a>
+  </div>
+</div>
+<div class="column-content">
+  <div class="fl max-area">
+    <div class="pic"><a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/640_575.jpg" width="640" height="575"></a></div>
+    <div class="tit tit-right">
+      <h1><i></i><a href="javascript:;">夏季低帮帆布鞋休闲鞋</a></h1>
+      <div>新品特惠：<b>¥</b><em>158.00</em></div>
+    </div>
+  </div>
+  <div class="fr min-area">
+    <div class="pic"><a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/420_374.jpg" width="420" height="374"></a></div>
+    <div class="tit">
+      <h1><i></i><a href="javascript:;">夏季低帮帆布鞋休闲鞋</a></h1>
+      <div>新品特惠：<b>¥</b><em>158.00</em></div>
+    </div>
+  </div>
+  <ul class="column-list">
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="wrapper column-tit-bg">
+  <div class="layout column-tit">
+    <h2 class="icon4"><a name="mzg">民族馆</a></h2>
+    <i class="tit-img2"></i>
+    <a href="javascript:;" class="more">更多</a>
+  </div>
+</div>
+<div class="column-content">
+  <div class="fl min-area">
+    <div class="pic"><a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/420_374.jpg" width="420" height="374"></a></div>
+    <div class="tit">
+      <h1><i></i><a href="javascript:;">夏季低帮帆布鞋休闲鞋</a></h1>
+      <div>新品特惠：<b>¥</b><em>158.00</em></div>
+    </div>
+  </div>
+  <div class="fr max-area">
+    <div class="pic"><a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/640_575.jpg" width="640" height="575"></a></div>
+    <div class="tit tit-left">
+      <h1><i></i><a href="javascript:;">夏季低帮帆布鞋休闲鞋</a></h1>
+      <div>新品特惠：<b>¥</b><em>158.00</em></div>
+    </div>
+  </div>
+  <ul class="column-list">
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+    <li>
+      <a href="#"><img src="$!webPath/resources/style/shop/bx/images/247_247.jpg" width="247" height="247"></a>
+      <div>
+        <h1><a href="">2016春新款休闲布鞋</a></h1>
+        <p><b>¥</b><em>158.00</em></p>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="wrapper helper-bg">
+  <div class="layout helper-area">
+    <ul class="helper-list dib-m spacing">
+      <li>
+        <i class="icon1"></i>
+        <em><a href="javascript:;">新手帮助</a></em>
+        <a href="javascript:;">交易条款协议</a>
+        <a href="javascript:;">注册新用户</a>
+        <a href="javascript:;">会员积分详情</a>
+      </li>
+      <li>
+        <i class="icon2"></i>
+        <em><a href="javascript:;">购物指南</a></em>
+        <a href="javascript:;">订购流程</a>
+        <a href="javascript:;">验货与签收</a>
+        <a href="javascript:;">订单配送查询</a>
+      </li>
+      <li>
+        <i class="icon3"></i>
+        <em><a href="javascript:;">支付/配送</a></em>
+        <a href="javascript:;">支付方式</a>
+        <a href="javascript:;">配送方式</a>
+        <a href="javascript:;">配送时间及运费</a>
+      </li>
+      <li>
+        <i class="icon4"></i>
+        <em><a href="javascript:;">售后服务</a></em>
+        <a href="javascript:;">退换货政策</a>
+        <a href="javascript:;">退款说明</a>
+        <a href="javascript:;">发票制度</a>
+      </li>
+      <li>
+        <i class="icon5"></i>
+        <em><a href="javascript:;">会员服务</a></em>
+        <a href="javascript:;">找回密码</a>
+        <a href="javascript:;">联系我们</a>
+      </li>
+    </ul>
+    <img src="$!webPath/resources/style/shop/bx/images/rwm-img.jpg" width="150" height="150" class="dib-m rwm-img">
+  </div>
+</div>
+<div class="wrapper footer-bg">
+  <div class="layout footer-area">
+    <h1 class="logo dib-m"><a href="javascript:;">聚雅堂</a></h1>
+    <div class="bottom-info dib-m">
+     <span class="bottom-nav"><a href="javascript:;">关于聚雅堂</a>|<a href="javascript:;">品牌招商</a>|<a href="javascript:;">集团采购</a>|<a href="javascript:;">招贤纳士</a>|<a href="javascript:;">手机聚雅堂</a>|<a href="javascript:;">联系我们</a>|<a href="javascript:;">品牌大全</a>|<a href="javascript:;">网站地图</a>|<a href="javascript:;">销售排行</a>|<a href="javascript:;">聚雅堂资讯</a>|<a href="javascript:;">网站联盟</a>|<a href="javascript:;">友情链接</a></span>
+      <span class="copyright">Copyright © 2011-2015 shangpintang Technology Co., Ltd. 赣ICP备09070608号-4 增值电信业务经营许可证：赣 B2-20090203 公网安备：4403101910665</span>
+      <span class="bottom-img-link">
+        <a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/index-bottom-img1.png" width="108" height="40" /></a>
+        <a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/index-bottom-img2.png" width="108" height="40" /></a>
+        <a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/index-bottom-img3.png" width="108" height="40" /></a>
+        <a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/index-bottom-img4.png" width="108" height="40" /></a>
+        <a href="javascript:;"><img src="$!webPath/resources/style/shop/bx/images/index-bottom-img5.png" width="108" height="40" /></a>
+      </span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

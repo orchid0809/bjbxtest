@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title> #macro ( genericTree $somelist ) #foreach ( $some in
+$somelist )
+<option value="$!some.id">#if($!some.level>0) #foreach($count
+	in [0..$!some.level])&nbsp;#end #end $!some.className</option>
+#genericTree($some.childs) #end #end
+<link
+	href="$!webPath/resources/style/system/manage/$!{config.websiteCss}/template.css"
+	rel="stylesheet" type="text/css" />
+<link
+	href="$!webPath/resources/style/common/css/jquery-ui-1.8.22.custom.css"
+	type=text/css rel=stylesheet>
+	<script src="$!webPath/resources/js/jquery-1.6.2.js"></script>
+	<script src="$!webPath/resources/js/jquery-ui-1.8.21.js"></script>
+	<script src="$!webPath/resources/js/jquery.poshytip.min.js"></script>
+	<script src="$!webPath/resources/js/jquery.shop.common.js"></script>
+	<script src="$!webPath/resources/js/jquery.validate.min.js"></script>
+	<script src="$!webPath/resources/js/jquery.zh.cn.js"></script>
+	<script>
+		jQuery(document).ready(function() {
+			jQuery.validator.addMethod("verify", function(value, element) {
+				var re = /^[0-9a-zA-Z]*$/;
+				if (re.test(jQuery("#userName").val())) {
+					return true;
+				} else {
+					return false;
+				}
+			});
+			jQuery("#theForm").validate({
+				ignore : "",
+				rules : {
+					code : {
+						required : true
+					},
+					name : {
+						required : true,
+						maxlength : 20,
+						remote : {
+							url : "$!webPath/verify_storename.htm",
+							type : "get",
+							dataType : "json",
+							data : {
+								"store_name" : function() {
+									return jQuery("#name").val();
+								},
+								"id" : "$!obj.id"
+							}
+						}
+					},
+					area_id : {
+						required : true
+					},
+					postcode : {
+						number : true,
+						minlength : 6,
+						maxlength : 6
+					},
+					link_name : {
+						required : true
+					},
+					phone : {
+						required : true
+					},
+					userName : {
+						required : true,
+						verify : true,
+						remote : {
+							url : "$!webPath/verify_username.htm", //后台处理程序
+							type : "post", //数据发送方式
+							dataType : "json", //接受数据格式   
+							data : { //要传递的数据
+								"userName" : function() {
+									return jQuery("#userName").val();
+								},
+								"id" : ""
+							}
+						}
+					},
+					password : {
+						required : true,
+						minlength : 6,
+						maxlength : 20
+					}
+				},
+				messages : {
+					code : {
+						required : "工厂编号不能为空"
+					},
+					name : {
+						required : "工厂名称不能为空",
+						maxlength : "工厂名最大不能超过20字符",
+						remote : "工厂名已经存在"
+					},
+					area_id : {
+						required : "工厂区域不能为空"
+					},
+					postcode : {
+						number : "邮编只能为数字",
+						minlength : "只能为6位",
+						maxlength : "只能为6位"
+					},
+					link_name : {
+						required : "联系人不能为空"
+					},
+					phone : {
+						required : "联系电话不能为空"
+					},
+					userName : {
+						required : "用户名不能为空",
+						remote : "该用户名已经存在",
+						verify : "不可输入特殊符号"
+					},
+					password : {
+						required : "密码不能为空",
+						minlength : "密码不能少于{0}位",
+						maxlength : "密码不能大于{0}位"
+					}
+				}
+			});
+			//
+			jQuery("select").change(function() {
+				var level = jQuery(this).attr("level");
+				var id = jQuery(this).val();
+				if (id != ""){
+					jQuery.post("$!webPath/load_area.htm",
+						{
+							"pid" : id
+						},
+						function(data) {
+							jQuery("#area"+ level).empty();
+							jQuery("#area"+ level).append("<option value=''>请选择</option>");
+							jQuery.each(data,function(index,item) {
+								jQuery("#area"+ level).append("<option value='"+item.id+"'>"+ item.areaName+ "</option>");
+								jQuery("#area"+ level).show();
+							});
+						}, "json");
+				} else {
+					for (var i = level; i <= 3; i++) {
+						jQuery("#area" + i).empty();
+						jQuery("#area" + i).hide();
+					}
+				}
+			});
+			jQuery("#area3").change(function() {
+				var id = jQuery(this).val();
+				jQuery("#area_id").val(id);
+			});
+		});
+
+		function saveForm() {
+			jQuery("#theForm").submit();
+		}
+	</script>
+</head>
+<body>
+	<div class="cont">
+		<h1 class="seth1">工厂管理</h1>
+		<div class="settab">
+			<span class="tab-one"></span> <span class="tabs"> <a
+				href="$!webPath/admin/storefactory_list.htm">管理</a> | <a
+				href="$!webPath/admin/storefactory_add.htm" class="this">新增</a>
+			</span><span class="tab-two"></span>
+		</div>
+		<form name="theForm" id="theForm" action="$!webPath/admin/storefactory_save.htm" method="post">
+			<input name="currentPage" type="hidden" id="currentPage" value="$!currentPage" /> 
+			<input name="id" type="hidden" id="id" value="" /> 
+			<!--list_url,add_url后台方法参数接收 ，供添加成功后选择跳回列表页还是继续添加页面调用 -->
+			<input name="list_url" type="hidden" id="list_url" value="$!webPath/admin/storefactory_list.htm" /> 
+			<input name="add_url" type="hidden" id="add_url" value="$!webPath/admin/storefactory_add.htm" /> 
+			<input name="user_id" type="hidden" id="user_id" value="" />
+			<div class="setcont">
+				<!--鼠标经过样式-->
+				<ul class="set1">
+					<li>
+						<strong class="orange fontsize20">*</strong>工厂编号
+					</li>
+					<li>
+						<span class="webname"> 
+							<input name="code" type="text" id="code" value="" size="40" autocomplete="off" />
+						</span>
+					</li>
+				</ul>
+				<ul class="set1">
+					<li>
+						<strong class="orange fontsize20">*</strong>工厂名称
+					</li>
+					<li>
+						<span class="webname"> 
+							<input name="name" type="text" id="name" value="" size="40" autocomplete="off" />
+						</span>
+					</li>
+				</ul>
+				<ul class="set1">
+					<li>
+						<strong class="orange fontsize20">*</strong>所在地区
+					</li>
+					<li>
+						<span class="webnamesec sizese"> 
+							<select name="area1" id="area1" level="2" style="width:80px;">
+								<option value="" selected="selected">请选择地区</option>
+								#foreach($area in $areas)
+								<option value="$!area.id">$!area.areaName</option> 
+								#end
+							</select> 
+							<select name="area2" id="area2" style="display:none;width:80px;" level="3">
+							</select> 
+							<select name="area3" id="area3" style="display:none;width:80px;" level="4">
+							</select> 
+							<input name="area_id" type="hidden" id="area_id" value="" />
+						</span>
+					</li>
+				</ul>
+				<ul class="set1">
+					<li>详细地址</li>
+					<li><span class="webname"> <input name="address"
+							type="text" id="address" value="" />
+					</span></li>
+				</ul>
+				<ul class="set1">
+					<li>邮政编码</li>
+					<li><span class="webname"> <input name="postcode"
+							type="text" id="postcode" value="" />
+					</span></li>
+				</ul>
+				<ul class="set1">
+					<li><strong class="orange fontsize20">*</strong>联系人</li>
+					<li><span class="webname"> <input name="link_name"
+							type="text" id="link_name" value="" />
+					</span></li>
+				</ul>
+				<ul class="set1">
+					<li><strong class="orange fontsize20">*</strong>联系电话</li>
+					<li><span class="webname"> <input name="phone"
+							type="text" id="phone" value="" />
+					</span></li>
+				</ul>
+				<ul class="set1">
+					<li>开户银行名称</li>
+					<li><span class="webname"> <input name="bank_name"
+							type="text" id="bank_name" value="" />
+					</span></li>
+				</ul>
+				<ul class="set1">
+					<li>开户银行所在地址</li>
+					<li><span class="webname"> <input name="bank_address"
+							type="text" id="bank_address" value="" />
+					</span></li>
+				</ul>
+				<ul class="set1">
+					<li>开户银行支行名称</li>
+					<li><span class="webname"> <input name="bank_khname"
+							type="text" id="bank_khname" value="" />
+					</span></li>
+				</ul>
+				<ul class="set1">
+					<li>账户名</li>
+					<li><span class="webname"> <input name="bank_user"
+							type="text" id="bank_user" value="" />
+					</span></li>
+				</ul>
+				<ul class="set1">
+					<li>账号</li>
+					<li><span class="webname"> <input name="bank_username"
+							type="text" id="bank_username" value="" />
+					</span></li>
+				</ul>
+				<ul class="set1">
+					<li>登录账户名</li>
+					<li><span class="webname"> <input name="userName"
+							type="text" id="userName" value="" />
+					</span></li>
+				</ul>
+				<ul class="set1">
+					<li>密码</li>
+					<li><span class="webname"> <input name="password"
+							type="text" id="password" value="" />
+					</span></li>
+				</ul>
+			</div>
+		</form>
+		<div class="submit">
+			<input name="save" type="button" value="提交" onclick="saveForm()" />
+		</div>
+	</div>
+</body>
+</html>

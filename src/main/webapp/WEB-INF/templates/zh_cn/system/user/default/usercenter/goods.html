@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出售中的商品-$!{config.title}- Powered by shopping</title>
+<meta name="keywords" content="$!config.keywords" />
+<meta name="description" content="$!config.description" />
+<meta name="generator" content="shopping 2.0" />
+<meta name="author" content="www.shopping.com">
+<meta name="copyright" content="shopping Inc. All Rights Reserved">
+<link href="$!webPath/resources/style/common/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<link href="$!webPath/resources/style/system/front/default/css/public.css" type="text/css" rel="stylesheet" />
+<link href="$!webPath/resources/style/system/front/default/css/user.css" type="text/css" rel="stylesheet" />
+<link href="$!webPath/resources/style/common/css/overlay.css" type="text/css" rel="stylesheet" />
+<script src="$!webPath/resources/js/jquery-1.8.0.min.js"></script>
+<script src="$!webPath/resources/js/jquery.shop.common.js"></script>
+<script src="$!webPath/resources/js/jquery.validate.min.js"></script>
+<script src="$!webPath/resources/js/jquery.poshytip.min.js"></script>
+<script src="$!webPath/resources/js/bootstrap.min.js"></script>
+<script>
+	 var id 
+	//新加的
+	jQuery(document).ready(function() {
+		jQuery('.modifyinventory').click(function(){
+			var that = jQuery(this);
+			jQuery('#inventorySetModal').modal();
+			jQuery('#inventorySetModal').on('shown.bs.modal', function () {
+				jQuery.post("$!webPath/seller/goods_inventory.htm",{"goods_spec_ids":$('.modifyinventory').attr("data")},function(resultTemplate){
+					$('.inventory').empty().append(resultTemplate);
+					id = that.attr('data_id');
+					
+					var inventory_detail = that.attr('sepc_ids');
+					console.log(inventory_detail)
+			       /*   var goods_inventory_detail=eval("("+inventory_detail+")");  */
+			        var goods_inventory_detail = JSON.parse(inventory_detail);
+			         goods_inventory_detail = jQuery.parseJSON(inventory_detail);
+			         jQuery.each(goods_inventory_detail, function(index,item){
+				     jQuery("#inventory_details_count_"+item.id).val(item.count);
+				     jQuery("#inventory_details_price_"+item.id).val(item.price);
+	     			});
+				})
+				jQuery('#inventorySetModal').unbind('shown.bs.modal')//解除绑定
+			});
+		
+		});
+		
+		/**
+		*修改库存确定事件
+		*/
+		jQuery('.sure').click(function(){
+			var intentory_details="";
+			jQuery("input[id^=inventory_details_count_]").each(function(){
+				 var id=jQuery(this).attr("name");
+				 var count=jQuery(this).val();
+				 var price=jQuery("#inventory_details_price_"+id).val();
+				 intentory_details=id+","+count+","+price+";"+intentory_details;
+  			});
+  			jQuery.ajax({type:'POST',
+	              url:'$!webPath/seller/modify_goods_intentory.htm',
+				  data:{"id":id,"intentory_details":intentory_details},
+				beforeSend:function(){
+				  
+				},
+			   success:function(data){
+	             window.location.href="$!webPath/seller/goods_storage.htm"
+              }
+	       });
+		});
+	
+	
+	});
+</script>
+</head>
+<body>
+$!httpInclude.include("/top.htm")
+<div class="main"> 
+  $!httpInclude.include("/seller/nav_head.htm") 
+  <div class="user_center">
+    <table width="1000" border="0" cellspacing="0" cellpadding="0" class="user_table">
+      <tr>
+        $!httpInclude.include("/seller/nav.htm?op=goods")
+        <td id="centerbg" valign="top">
+        <div class="buyer_position"><div class="buyer_p_box"><a href="$!webPath/seller/index.htm">卖家中心</a> > <span>出售中的商品</span></div></div>
+		<form action="$!webPath/seller/goods.htm" method="post" name="ListForm" id="ListForm">
+		<div class="productmain">
+            <div class="pdctitle blue2">出售中的商品<span class="classname">
+              <input name="mulitId" type="hidden" id="mulitId" />
+            </span></div>
+            <div class="alldel">
+              <div  class="alldel_r">
+              <span class="alldelsel">商品分类
+                <select name="user_class_id" id="user_class_id">
+                  <option value="">请选择商品分类...</option>
+                  #genericTree($!gcs)
+                 <!--  #foreach($user_class in $goodsViewTools.query_user_class(""))
+                  <option value="$!user_class.id">$!user_class.className</option>
+                  #foreach($c_user_class in $user_class.childs)
+                  <option value="$!c_user_class.id">&nbsp;&nbsp;$!c_user_class.className</option>
+                  #end
+                  #end -->
+                </select>
+                </span><span class="alldelsear">　商品名称
+                <input name="goods_name" type="text" id="goods_name" />
+                </span>
+                <span class="alldelsear">　商品编码
+                <input name="goods_name" type="text" id="goods_encoding" />
+                </span>
+                <span class="alldelbtn">
+                <input name="" type="button"  value="搜索" style="cursor:pointer;" onclick="query();"/>
+              </span></div>
+              <div class="alldel_l"> <span class="alldel_la">
+                <input name="all" type="checkbox" id="all" value="" onclick="selectAll(this)" />
+              </span><span class="alldel_lb"><label for="all">全选</label></span><span class="alldel_ld"><a class="button_common" href="javascript:void(0);" onclick="cmd('$!webPath/seller/goods_sale.htm','')">删除</a></span> </div>
+            </div>
+            <div class="operation">
+              <table width="790" border="0" cellspacing="0" cellpadding="0" id="opertable" >
+                <tr id="opertitle">
+                 <td width="10">&nbsp;</td>
+                  <td class="proname" width="100">商品编码</td>
+                  <td width="50" class="proclassify">所属类别</td>
+                  <td width="270" class="promoney">商品名称</td>
+                  <td width="51"  class="prorec">价格</td>
+                   <td width="51"  class="prorec">上架时间</td>
+                   <td width="51"  class="prorec">推荐排序</td>
+                    <td width="51"  class="prorec">总库存</td>
+                   <td width="51"  class="prorec">销量</td>
+                  <td width="240" align="center">操作</td>
+                </tr>
+				#foreach($obj in $objs)
+					<tr>
+			          <td align="center"><input name="checkbox" type="checkbox" id="checkbox" value="$!obj.id" /></td>
+			          <td><!-- <label>
+			            <textarea name="textarea" cols="40" rows="3"  title="可编辑" onblur="ajax_update('$!obj.id','goods_name',this)">$!obj.goods_name</textarea>
+			          </label> -->
+			          	$!obj.goods_encoding
+			          </td>
+			          <td>$!obj.gc.className</td>
+			          <td>$!obj.goods_name</td>
+			          <td>$!obj.goods_price</td>
+			         
+			          <td>$!obj.goods_seller_time</td>
+			          <td align="center">
+			          	$!obj.recommend_order
+			          </td>
+			          <td align="center">
+			          	$!obj.goods_inventory
+			          	<a href="javascript:void(0);" data="$!goods_spec_ids"  sepc_ids='$!obj.goods_inventory_detail' data_id="$!obj.id"
+						 class= "modifyinventory"
+				         >
+				          	修改
+						 </a> 
+			          </td>
+			          <td align="center">$!obj.goods_salenum</td>
+			          <td class="ac8" align="center">
+			          
+			          	<!-- <a href="$!webPath/goods.htm?id=$!obj.id" target="_blank">查看</a> -->
+			          <a target="_blank" href="$!webPath/seller/goods_edit.htm?id=$!obj.id">
+			          	<input name="" type="button" style="width:62px;height:30px"  value="修改商品" style="cursor:pointer;"/>
+			          </a>
+			          <input name="" type="button" style="width:62px;height:30px"  value="缺货" style="cursor:pointer;" onclick="query();"/>
+			          </td>
+			        </tr>
+				
+               <!--  <tr class="opertr">
+                  <td class="proname" valign="middle" ><span class="checkpro">
+                    <input type="checkbox" value="$!obj.id" />
+					#if($!obj.goods_main_photo)
+					  #set($img="$!webPath/$!{obj.goods_main_photo.path}/$!{obj.goods_main_photo.name}_small.$!{obj.goods_main_photo.ext}")
+					#else
+					  #set($img="$!webPath/$!{config.goodsImage.path}/$!{config.goodsImage.name}")
+					#end
+                    </span><span class="imgpro"><img src="$!img" width="60" height="63" /></span><span class="nameproduct"><a href="$!webPath/goods_$!{obj.id}.htm" target="_blank">$!obj.goods_name</a></span></td>
+                  <td class="proclassify">#if($!obj.gc)$!storeTools.generic_goods_class_info($!obj.gc)#end</td>
+                  <td  class="promoney">$!obj.store_price</td>
+                  <td class="prorec"><img src="$!webPath/resources/style/system/front/default/images/usercenter/$!{obj.goods_recommend}.jpg" width="16" height="14" /></td>
+                  <td class="operajt"><span class="edit"><a href="$!webPath/seller/goods_edit.htm?id=$!obj.id" target="_blank">编辑</a></span><span class="out"><a href="$!webPath/seller/goods_sale.htm?mulitId=$!obj.id">下架</a></span><span class="del"><a href="javascript:if(confirm('删除后不可恢复?'))window.location.href='$!webPath/seller/goods_del.htm?mulitId=$!obj.id'">删除</a></span></td>
+                </tr> -->
+                #end
+              </table>
+            </div>
+            <div class="alldel">
+              <div  class="userfenye">$!gotoPageHTML</div>
+              <!-- <div class="alldel_l"> <span class="alldel_la">
+                <input name="all1" type="checkbox" id="all1" onclick="selectAll(this)" value="" />
+              </span><span class="alldel_lb"><label for="all">全选</label></span><span class="alldel_ld"><a class="button_common" href="javascript:void(0);" onclick="cmd('$!webPath/seller/goods_sale.htm','')">下架</a></span> </div> -->
+            </div>
+          </div>
+		  </form>
+	    </td>
+      </tr>
+    </table>
+     <!-- 修改弹出框 -->
+<div class="modal fade" id="inventorySetModal" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h5 class="modal-title" id="myModalLabel">
+               <span>修改库存</span>
+            </h5>
+         </div>
+         <div class="modal-body inventory">
+       			
+         </div>
+         <div class="modal-footer">
+         	<button type="button" class="btn btn-primary sure">确认</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            
+         </div>
+      </div>
+</div>
+  </div>
+  $!httpInclude.include("/footer.htm")
+</div>
+</body>
+</html>

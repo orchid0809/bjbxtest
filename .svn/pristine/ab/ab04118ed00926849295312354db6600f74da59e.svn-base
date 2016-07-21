@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title> #macro ( genericTree $somelist ) #foreach ( $some in
+$somelist )
+<option value="$!some.id">#if($!some.level>0) #foreach($count
+	in [0..$!some.level])&nbsp;#end #end $!some.className</option>
+#genericTree($some.childs) #end #end
+<link
+	href="$!webPath/resources/style/system/manage/$!{config.websiteCss}/template.css"
+	rel="stylesheet" type="text/css" />
+<link
+	href="$!webPath/resources/style/common/css/jquery-ui-1.8.22.custom.css"
+	type=text/css rel=stylesheet>
+<script src="$!webPath/resources/js/jquery-1.6.2.js"></script>
+<script src="$!webPath/resources/js/jquery-ui-1.8.21.js"></script>
+<script src="$!webPath/resources/js/jquery.poshytip.min.js"></script>
+<script src="$!webPath/resources/js/jquery.shop.common.js"></script>
+<script src="$!webPath/resources/js/jquery.validate.min.js"></script>
+<script src="$!webPath/resources/js/jquery.zh.cn.js"></script>
+<script>
+	jQuery(document).ready(
+			function() {
+				jQuery("#theForm").validate({
+					ignore : "",
+					rules : {
+						name : {
+							required : true,
+							maxlength : 20,
+							remote : {
+								url : "$!webPath/verify_storename.htm",
+								type : "get",
+								dataType : "json",
+								data : {
+									"store_name" : function() {
+										return jQuery("#name").val();
+									},
+									"id" : "$!obj.id"
+								}
+							}
+						}
+					},
+					messages : {
+						name : {
+							required : "test名称不能为空",
+							maxlength : "test名最大不能超过20字符",
+							remote : "test名已经存在"
+						}
+					}
+				});
+			});
+
+	function saveForm() {
+		jQuery("#theForm").submit();
+	}
+</script>
+</head>
+<body>
+	<div class="cont">
+		<h1 class="seth1">工厂管理</h1>
+		<div class="settab">
+			<span class="tab-one"></span> 
+			<span class="tabs"> 
+				<a href="$!webPath/admin/test_list.htm">管理</a> | 
+				<a href="$!webPath/admin/test_add.htm" #if(!$!edit)class="this"#end>新增</a>
+				#if($!edit)<a href="$!webPath/admin/storefactory_edit.htm?id=$!obj.id" class="this">编辑</a>#end
+			</span> 
+			<span class="tab-two"></span>
+		</div>
+		<form name="theForm" id="theForm"
+			action="$!webPath/admin/test_save.htm" method="post">
+			<input name="id" type="hidden" id="id" value="$!obj.id" /> 
+			<!--list_url,add_url后台方法参数接收 ，供添加成功后选择跳回列表页还是继续添加页面调用 -->
+			<input name="currentPage" type="hidden" id="currentPage" value="$!currentPage" /> 
+			<input name="list_url" type="hidden" id="list_url" value="$!webPath/admin/test_list.htm" /> 
+			<input name="add_url" type="hidden" id="add_url" value="$!webPath/admin/test_add.htm" /> 
+			<div class="setcont">
+				<ul class="set1">
+					<li>
+						<strong class="orange fontsize20">*</strong>test名称
+					</li>
+					<li>
+						<span class="webname"> 
+							<input name="name" type="text" id="name" value="$!obj.name" size="40" autocomplete="off" />
+						</span>
+					</li>
+				</ul>
+			</div>
+		</form>
+		<div class="submit">
+			<input name="save" type="button" value="提交" onclick="saveForm()" />
+		</div>
+	</div>
+</body>
+</html>

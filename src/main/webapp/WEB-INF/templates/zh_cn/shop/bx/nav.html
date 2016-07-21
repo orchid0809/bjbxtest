@@ -1,0 +1,24 @@
+<div class="wrapper nav-bg">
+  <div class="layout nav-area spacing">
+    <em class="sort dib-t">全部商品分类</em>
+    <ul class="nav-list dib-t">
+     <!--  <li><a href="javascript:;">男鞋馆</a>/</li>
+      <li><a href="javascript:;">女鞋馆</a>/</li>
+      <li><a href="javascript:;">童鞋馆</a>/</li>
+      <li><a href="javascript:;">民族馆</a>/</li>  -->
+      	#set($navs=$!navTools.queryNav(0,-1))
+    
+   	 	#foreach($nav in $navs)
+	    #if($!CommUtil.indexOf("$!nav.url","http://")>=0)
+	      #set($url="$!nav.url")
+	    #else
+	      #set($url="$!webPath/$!{nav.url}")
+	    #end
+	    <li><a id="$!nav.id" #if($!nav.new_win==1)target="_blank"#end original_url="$!nav.original_url" href="$!url"><span>$!{nav.title}</span></a>/</li>
+    	#end
+    
+    </ul>
+    <span class="zc dib-t"><a href="javascript:;">众筹</a><i></i></span>
+    <span class="tmq dib-t"><a href="javascript:;">特码区</a><i></i></span>
+  </div>
+</div>

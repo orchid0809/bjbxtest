@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+</head>
+<meta name="keywords" content="$!config.keywords" />
+<meta name="description" content="$!config.description" />
+<meta name="generator" content="shopping 2.0" />
+<meta name="author" content="www.shopping.com">
+<meta name="copyright" content="shopping Inc. All Rights Reserved">
+<link href="$!webPath/resources/style/system/manage/$!{config.websiteCss}/template.css"  rel="stylesheet" type="text/css"/>
+<link href="$!webPath/resources/style/system/front/default/css/public.css" type="text/css" rel="stylesheet" />
+<link href="$!webPath/resources/style/system/front/default/css/second.css" type="text/css" rel="stylesheet" />
+<link href="$!webPath/resources/style/common/css/overlay.css" type="text/css" rel="stylesheet" />
+<link href="$!webPath/resources/style/common/css/overlay.css" type="text/css" rel="stylesheet" />
+<link  href="$!webPath/resources/style/common/css/jquery-ui-1.8.22.custom.css" type=text/css rel=stylesheet>
+<script src="$!webPath/resources/js/jquery-1.6.2.js"></script>
+<script src="$!webPath/resources/js/jquery-ui-1.8.21.js"></script>
+<script src="$!webPath/resources/js/jquery.zh.cn.js"></script>
+
+<script src="$!webPath/resources/js/jquery.shop.common.js"></script>
+<script src="$!webPath/resources/js/jquery.validate.min.js"></script>
+<script src="$!webPath/resources/js/jquery.poshytip.min.js"></script>
+<script charset="utf-8" src="$!webPath/resources/editor/kindeditor.js"></script>
+<script charset="utf-8" src="$!webPath/resources/editor/lang/zh_CN.js"></script>
+<script src="$!webPath/resources/js/swfupload.js"></script>
+<script src="$!webPath/resources/js/swfupload.queue.js"></script>
+
+<script>
+jQuery(document).ready(function(){
+ //获取下级地区信息
+	  jQuery("select[id^=areas_]").change(function(){						   
+			var areaMark = jQuery(this).attr("areaMark");
+			var parent_id = jQuery("#areas_"+areaMark).val();									   
+			jQuery.post("$!webPath/admin/user_getAreaChilds.htm",{
+						"parent_id":parent_id,
+						"areaMark":areaMark
+						},function(data){
+								if(areaMark=="province"){
+									//jQuery("#area_id").html("<option value=''>请选择...</option>");	
+									jQuery("#areas_city").html("<option value=''>请选择...</option>"+data);
+								}
+								//if(areaMark=="city"){
+									//jQuery("#area_id").html(data);
+								//}	
+							},"text");	
+		//jQuery("#areas_"+areaMark).attr("selected",true);
+		
+	  });
+	  #if($!obj.area)
+	  jQuery("#areas_province").val("$!obj.area.parent.parent.id"); 
+	  jQuery("#areas_city").html("<option>$!obj.area.parent.areaName</option>");
+	  //jQuery("#area_id").html("<option>$!obj.area.areaName</option>");
+	  #end
+
+ });
+</script>
+<body>
+  <div class="cont">
+    <h1 class="seth1">会员信息</h1>
+	<form>
+    <div class="allmem_search">
+      <ul>
+       <li>
+            <div class="form_right_line_05">
+              <span class="setinput">
+              		省
+                   <select id="areas_province" areaMark="province" name="province">
+                  		 <option value="">请选择...</option>
+                   #foreach($area in $areas)
+                   		<option value="$!area.id">$!area.areaName</option>
+                   #end
+                   </select>
+                   	市
+                   <select id="areas_city" areaMark="city" name="city">
+                   		<option value="">请选择...</option>
+                   </select>
+                   	<!-- 县
+                    <select id="area_id" name="area_id" hidden> 
+                    	<option value="">请选择...</option>
+                   </select> -->                   
+               </span>
+                <span>会员手机:</span>
+                <sapn>
+					<input type="text" id="mobile" name="mobile"/>
+                </span>
+            </div>
+        </li>
+        <li> 
+			<span class="btn_search">
+          <input name="" type="submit"  value="查询" style="cursor:pointer;" title="查询"/>
+        </span> 
+       </li>
+      </ul>
+    </div>
+	</form>
+ 
+	<FORM name="infoForm" id="infoForm"  action="$!webPath/admin/user_info.htm" method="post">
+    <div class="allmem_table">
+      <table width="98%" border="0" cellspacing="0" cellpadding="0">
+        <tr style="background: #if($!config.websiteCss=='blue') #2A7AD2 #end 
+      #if($!config.websiteCss=='black')#333 #end; height:30px; color:#FFF">
+          <td width="11%" align="left">&nbsp;</td>
+          <td width="11%" align="center">省</td>
+          <td width="11%" align="center">市</td>
+          <td width="11%" align="center">会员姓名</td>
+          <td width="11%" align="center">会员级别</td>
+          <td width="15%" align="center">会员手机</td>
+          <td width="30%" align="center">会员详细地址</td>
+        </tr>
+        #foreach($!obj in $objs)
+        <tr>
+	      <td width="11%" align="left">&nbsp;</td>
+          <td width="11%" align="center">$!obj.area.parent.parent.areaName</td>
+          <td width="11%" align="center">$!obj.area.parent.areaName</td>
+          <td width="11%" align="center">$!obj.userName</td>
+          <td width="11%" align="center">$!CommUtil.formatRank($!obj.rank)</td>
+          <td width="15%" align="center">$!obj.mobile</td>
+          <td width="30%" align="center">$!obj.address</td>
+        </tr>
+        #end
+      </table>
+    </div>
+    <div class="fenye">
+      <input name="userRole" type="hidden" id="userRole" value="BUYER" />
+      <input type="hidden" name="currentPage" id="currentPage" value="$!currentPage" />
+      <input name="mulitId" type="hidden" id="mulitId" />
+      $!gotoPageHTML
+	</div>
+	</FORM>
+  </div>
+</body>
+</html>

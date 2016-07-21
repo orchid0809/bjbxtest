@@ -1,0 +1,23 @@
+<div class="wrapper top-area">
+  <div class="layout">
+    <div class="fl">
+      <a href="javascript;">手机聚雅堂</a>
+    </div>
+    <div class="fr">
+
+      <span class="drop-down dib-t">
+        <em class="option">我的账户 <i></i></em>
+        <ul class="menu">
+          <li>账户信息</li>
+          <li>我的关注</li>
+          <li>咨询回复</li>
+          <li>待处理订单</li>
+        </ul>
+      </span>
+      <a href="javascript:;">我的订单</a>
+      <a href="javascript:;" class="pl18">联系客服</a>
+      <a href="javascript:;" class="red">登录</a>|
+      <a href="javascript:;" class="red">免费注册</a>
+    </div>
+  </div>
+</div>

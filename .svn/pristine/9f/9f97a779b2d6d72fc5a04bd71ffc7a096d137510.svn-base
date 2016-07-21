@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title> #macro ( genericTree $somelist ) #foreach ( $some in
+$somelist )
+<option value="$!some.id">#if($!some.level>0) #foreach($count
+	in [0..$!some.level])&nbsp;#end #end $!some.className</option>
+#genericTree($some.childs) #end #end
+<link
+	href="$!webPath/resources/style/system/manage/$!{config.websiteCss}/template.css"
+	rel="stylesheet" type="text/css" />
+<link
+	href="$!webPath/resources/style/common/css/jquery-ui-1.8.22.custom.css"
+	type=text/css rel=stylesheet>
+	<script src="$!webPath/resources/js/jquery-1.6.2.js"></script>
+	<script src="$!webPath/resources/js/jquery-ui-1.8.21.js"></script>
+	<script src="$!webPath/resources/js/jquery.poshytip.min.js"></script>
+	<script src="$!webPath/resources/js/jquery.shop.common.js"></script>
+	<script src="$!webPath/resources/js/jquery.validate.min.js"></script>
+	<script src="$!webPath/resources/js/jquery.zh.cn.js"></script>
+	<script>
+		jQuery(document).ready(function() {
+			jQuery("#theForm").validate({
+				ignore : "",
+				rules : {
+					user_id : {
+						required : true
+					},
+					title : {
+						required : true,
+						minlength : 0,
+						maxlength : 30
+					},
+					text : {
+						required : true,
+						minlength : 0,
+						maxlength : 300
+					}
+				},
+				messages : {
+					user_id : {
+						required : "留言对象不能为空"
+					},
+					title : {
+						required : "留言主题不能为空",
+						maxlength : "工厂名最大不能超过30字符",
+					},
+					text : {
+						required : "留言内容不能为空",
+						maxlength : "留言内容最大不能超过300字符",
+					}
+				}
+			});
+			//留言对象选择
+			jQuery("select[name='store']").change(function() {
+				var user_id = jQuery(this).val();
+				$("#user_id").val(user_id);
+			});
+			
+		});
+
+		function saveForm() {
+			jQuery("#theForm").submit();
+		}
+	</script>
+</head>
+<body>
+	<div class="cont">
+		<h1 class="seth1">回复留言</h1>
+		<div class="settab">
+			<span class="tab-one"></span> 
+			<span class="tabs"> 
+				<a href="$!webPath/admin/messageboardmanage_list.htm" class="this">管理留言</a> | 
+				<a href="$!webPath/admin/messageboardmanage_add.htm">发送留言</a>
+			</span>  
+			<span class="tab-two"></span>
+		</div>
+		<form name="theForm" id="theForm" action="$!webPath/admin/messageboardmanage_save.htm" method="post">
+			<input name="id" type="hidden" id="id" value="$!obj.id" /> 
+			<input name="currentPage" type="hidden" id="currentPage" value="$!currentPage" /> 
+			<!--list_url,add_url后台方法参数接收 ，供添加成功后选择跳回列表页还是继续添加页面调用 -->
+			<input name="list_url" type="hidden" id="list_url" value="$!webPath/admin/messageboardmanage_list.htm" /> 
+			<input name="add_url" type="hidden" id="add_url" value="$!webPath/admin/messageboardmanage_add.htm" />
+			<div class="setcont">
+				<!--鼠标经过样式-->
+				<ul class="set1">
+					<li>
+						<strong class="orange fontsize20">*</strong>发送人
+					</li>
+					<li>
+						<span class="webnamesec sizese"> 
+							$!obj.user.userName
+							<input name="user_id" type="hidden" id="user_id" value="$!obj.user.id" />
+						</span>
+					</li>
+				</ul>
+				<ul class="set1">
+					<li>
+						<strong class="orange fontsize20">*</strong>留言对象
+					</li>
+					<li>
+						<span class="webnamesec sizese"> 
+							$!obj.receive_user.store.store_name
+							<input name="user_id" type="hidden" id="receive_user_id" value="$!obj.user.id" />
+						</span>
+					</li>
+				</ul>
+				<ul class="set1">
+					<li>
+						<strong class="orange fontsize20">*</strong>留言主题
+					</li>
+					<li>
+						<span class="webname"> 
+							<input name="title" type="text" id="title" value="$!obj.title" size="40" autocomplete="off" readonly="readonly"/>
+						</span>
+					</li>
+				</ul>
+				<ul class="set1">
+					<li>
+						<strong class="orange fontsize20">*</strong>留言内容
+					</li>
+					<li>
+						<span class="webname"> 
+							<textarea name="text" id="text" rows="10" cols="70" readonly="readonly">$!obj.text</textarea>
+						</span>
+					</li>
+				</ul>
+				<ul class="set1">
+					<li>
+						<strong class="orange fontsize20">*</strong>回复内容
+					</li>
+					<li>
+						<span class="webname"> 
+							<textarea name="reply" id="reply" rows="10" cols="70"></textarea>
+						</span>
+					</li>
+				</ul>
+			</div>
+		</form>
+		<div class="submit">
+			<input name="save" type="button" value="提交" onclick="saveForm()" />
+		</div>
+	</div>
+</body>
+</html>

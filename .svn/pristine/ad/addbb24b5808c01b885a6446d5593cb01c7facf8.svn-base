@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors tuyunkun
+ * @date    2016-07-4 16:00:00
+ * @version 商品详情页样式
+ */
+
+body{ background: #ffffff; color: #777;}
+a{ color: #777;}
+a:hover{ color: #d43225;}
+
+.breadcrumb{ padding-left: 10px; height: 50px; line-height: 50px; color: #666666;}
+.breadcrumb a{ padding-left: 5px; padding-right: 5px;}
+.breadcrumb em{ font-size: 19px; font-weight: 700;}
+.breadcrumb span{ padding-left: 10px;}
+
+.product-intro{ min-height: 606px; height:auto;}
+.pic-area{margin-right: 20px; width: 482px;}
+.pic-area .pic, .pic-area .pic i,.pic-area .list li,.pic-min,.pic-min img,.pic-min i { display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; letter-spacing: normal; }
+.pic-area .pic { width: 480px; height: 480px; border: 1px solid #e4e4e4; text-align: center; overflow: hidden; }
+.pic-area .pic img { max-width: 480px; max-height: 480px; vertical-align: middle; overflow: hidden; }
+* html .pic-area .pic img { width: expression(this.width > 480 && this.width > this.height ? 480:auto); height: expression(this.height > 480 ? 480:auto); }
+.pic-area .pic i,.pic-min i { height: 100%; }
+.pic-area .list{ margin-top: 20px; height: 66px; clear: both; overflow: hidden;}
+.pic-area .list li{ width: 66px; height: 66px;}
+.pic-min { width: 64px; height: 64px; border: 1px solid #e4e4e4; text-align: center; overflow: hidden; }
+.pic-area .list .on .pic-min{border: 1px solid #d43225;}
+.pic-min img { padding: 2px; max-width: 60px; max-height: 60px; vertical-align: middle; overflow: hidden; }
+* html .pic-min img { width: expression(this.width > 60 && this.width > this.height ? 60:auto); height: expression(this.height > 60 ? 60:auto); }
+.pic-area .wz{ clear: both; overflow: hidden; padding-top: 8px; height: 30px;}
+.pic-area .wz .bh{ float: left; height: 30px; line-height: 30px;}
+.pic-area .wz .fx{ float: right; padding-left: 24px; height: 30px; line-height: 30px; background: url(../images/nr-icon1.png) 0 50% no-repeat;}
+
+.spec-info{ width: 480px; overflow: hidden;}
+.spec-info .tit{ margin-bottom: 25px; overflow: hidden;}
+.spec-info .tit h1{ padding-bottom: 12px; font-size: 18px; line-height: 1.6;}
+.spec-info .tit .gd{ color: #007ece; text-decoration: underline;}
+.price{ height: 50px; line-height: 50px; font-family:Arial, sans-serif;}
+.price em{ padding-right: 20px; font-size: 36px; color: #d43225; display:inline-block; *display:inline; *zoom:1; vertical-align: middle; letter-spacing: normal;}
+.price del{ color: #aaa; font-size: 18px; text-decoration:line-through; display:inline-block; *display:inline; *zoom:1; vertical-align: middle; letter-spacing: normal;}
+.pf-zx{ margin-top: 30px; overflow: hidden;}
+.pf{ float: left; height: 20px; line-height: 20px;}
+.pf em,.pf #score,.pf .dp{display:inline-block; *display:inline; *zoom:1; vertical-align: middle; letter-spacing: normal;}
+.pf .dt{ width: 72px;padding-right: 6px;}
+.pf .dp{ color: #007ece; font-size: 12px;}
+.pf #score{ padding-top: 3px;}
+.pf .dp i{ color: #fa1132; padding-left: 3px; padding-right: 3px;}
+.zx{ float: right; height: 20px; line-height: 20px;}
+.zx .qq{ display: block; padding-left: 30px; background: url(../images/nr-icon2.png) 0 50% no-repeat;}
+.choose-color{ clear: both; margin-top: 25px; overflow: hidden; }
+.choose-color .dt{ float: left; width: 72px; padding-right: 6px; line-height: 52px;}
+.choose-color .color-list{ display: block; overflow: hidden;}
+.choose-color .color-list li{ float: left; margin:0 6px 6px 0;}
+.choose-color .color-list div { width: 52px; height: 52px; text-align: center; overflow: hidden; border: 1px solid #e4e4e4;display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; letter-spacing: normal;}
+.choose-color .color-list div:hover{border: 1px solid #d43225;}
+.choose-color .color-list .on div{border: 1px solid #d43225; background: url(../images/nr-icon6.png) 100% 100% no-repeat;}
+.choose-color .color-list img { max-width: 45px; max-height: 45px; vertical-align: middle; overflow: hidden; }
+* html .choose-color .color-list img { width: expression(this.width > 45 && this.width > this.height ? 45:auto); height: expression(this.height > 45 ? 45:auto); }
+.choose-color .color-list div i { height: 100%; display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; letter-spacing: normal;}
+.choose-version{ clear: both; margin-top: 18px; overflow: hidden; }
+.choose-version .dt{ float: left; width: 72px; padding-right: 6px; padding-top: 6px; }
+.choose-version .version-list{ display: block; overflow: hidden;}
+.choose-version .version-list li{ float: left; margin:0 6px 6px 0;padding-left: 10px; padding-right: 10px;  height: 30px; line-height: 30px; border: 1px solid #e4e4e4;}
+.choose-version .version-list li:hover{border: 1px solid #d43225;}
+.choose-version .version-list .on{ border: 1px solid #d43225; background: url(../images/list-icon6.png) 100% 100% no-repeat;}
+.choose-amount{margin-top: 18px; clear: both; overflow: hidden;}
+.choose-amount .dt{width: 72px; padding-right: 6px; line-height: 30px;}
+.choose-amount .amount{font-family:Simsun, sans-serif; text-align: center;border: 1px solid #cacbcb;}
+.choose-amount .amount span{display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; letter-spacing: normal; width: 30px; height: 28px; cursor: pointer; color: #000000; font-size: 18px; text-align: center; line-height: 28px; font-weight: 700;}
+.choose-amount .amount .minus{ border-right: 1px solid #cacbcb;  }
+.choose-amount .amount .add{ border-left: 1px solid #cacbcb; }
+.choose-amount .amount .textbox{ margin:0 6px; width: 30px; height: 18px; line-height: 18px; border: none; background: none; text-align: center; font-size: 12px;}
+.btn-area{clear: both; margin-top: 20px; overflow: hidden;}
+.btn-area .gm{ float: left; margin-right: 12px; width: 120px; height: 40px; border: 1px solid #d43225; font-size: 16px; text-align: center; line-height: 40px; color: #d43225;}
+.btn-area .gm a{ display: block; color: #d43225; }
+.btn-area .gwc{ float: left; margin-right: 12px; width: 140px; height: 40px; border: 1px solid #d43225; font-size: 16px; text-align: center; line-height: 40px; color: #ffffff; background: #d43225;}
+.btn-area .gwc a{ display: block; color: #ffffff; }
+.btn-area .sm{ float: left;  width: 160px; height: 40px; border: 1px solid #dddddd; font-size: 16px; text-align: center; line-height: 40px; color: #aaaaaa; background: url("../images/nr-icon-rwm.png") 10px 50% no-repeat;}
+.btn-area .sm a{ display: block; padding-left: 25px; color: #aaaaaa; background: url("../images/nr-arrow-app.png") 96% 50% no-repeat; }
+.tips{clear: both; margin-top: 20px; overflow: hidden; line-height: 1.6;}
+.service-promise{clear: both; margin-top: 20px; overflow: hidden;}
+.service-promise .dt{width: 72px; padding-right: 6px; line-height: 30px;}
+.service-promise span{ margin-right: 30px; padding-left: 30px; height: 30px; line-height: 30px;}
+.service-promise .zp{background: url(../images/nr-icon3.png) 0 50% no-repeat; }
+.service-promise .th{background: url(../images/nr-icon4.png) 0 50% no-repeat; }
+.service-promise .zl{ margin: 0; background: url(../images/nr-icon5.png) 0 50% no-repeat; }
+
+.scroll-list{ width: 150px; height: 579px; padding:20px 15px 5px 15px; border: 1px solid #dfdfdf;}
+.track-tit{position: relative; height: 50px; line-height: 50px;    text-align: center;}
+.track-tit h3{position: relative; z-index: 2; display: inline-block;background: #fff; padding: 0 10px; font-size: 16px; color: #888888;}
+.track-tit i{position: absolute; z-index: 1; left: 0; right: 0; top: 25px; height: 1px; border-top: 1px dashed #dfdfdf;}
+
+.track-box{position:relative;}
+.track-con{position: relative; overflow: hidden; width: 150px; height: 450px;}
+.track-con .pic {height: 148px; overflow: hidden;}
+.track-con .pic img { max-width: 145px; max-height: 145px; vertical-align: middle; overflow: hidden; }
+* html .track-con .pic img { width: expression(this.width > 145 && this.width > this.height ? 145:auto); height: expression(this.height > 145 ? 145:auto); }
+.track-con .pic i { height: 100%; display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; letter-spacing: normal;}
+.track-con li em{ display: block; padding: 10px 8px 4px 8px; color: #e4393c; font-family:Arial, sans-serif; font-size: 20px;}
+.track-con li em i{ font-size: 14px; padding-right: 5px;}
+.track-con li h1{ padding: 0 8px 0 8px; height: 40px; line-height: 20px; overflow: hidden; word-break: break-all; word-wrap: break-word; color: #666666;}
+.track-con li h1 a{height: 40px;overflow: hidden;}
+.track-more{ margin-top: 25px; clear: both; overflow: hidden;}
+.track-more .prev{ float: left; width: 70px; height: 30px; background: url(../images/nr-arrow-t.png) 50% 50% no-repeat; cursor: pointer;}
+.track-more .next{ float: right; width: 70px; height: 30px; background: url(../images/nr-arrow-b.png) 50% 50% no-repeat; cursor: pointer;}
+.track-more .prev.prevStop, .track-more .next.nextStop{ -webkit-opacity: 0.5; -khtml-opacity: .5; -moz-opacity: .5; opacity: .5; filter: alpha(opacity=50); cursor: auto }
+
+.buying{ margin-top: 30px; margin-bottom: 30px; border: 1px solid #dfdfdf;}
+.buying h4{ padding: 15px 0 0 15px; font-size: 20px; }
+.buying-con{ clear: both; overflow: hidden; position: relative; width: 1130px; margin:auto; padding:10px 15px 25px 45px;}
+.wares-list{ height: 207px; overflow: hidden; letter-spacing:-0.34em; }
+.wares-list li,.wares-list .pic i{display:inline-block; *display:inline; *zoom:1; vertical-align: middle; letter-spacing: normal;}
+.wares-list .pic i{height: 100%;}
+.wares-list li{ width: 180px; margin-left: 20px; margin-right: 20px;}
+.wares-list .pic { width: 180px; height: 130px; text-align: center; overflow: hidden;}
+.wares-list .pic img { max-width: 170px; max-height: 130px; vertical-align: middle; overflow: hidden; }
+* html .wares-list .pic img { width: expression(this.width > 170 && this.width > this.height ? 170:auto); height: expression(this.height > 130 ? 130:auto); }
+.wares-list li em{ display: block; padding: 10px 8px 4px 8px; color: #e4393c; font-family:Arial, sans-serif; font-size: 20px;}
+.wares-list li em i{ font-size: 14px; padding-right: 5px;}
+.wares-list li h1{ padding: 0 8px 0 8px; height: 40px; line-height: 20px; overflow: hidden; word-break: break-all; word-wrap: break-word; color: #666666;}
+.wares-list li h1 a{height: 40px;overflow: hidden;}
+.buying-con .prev{ position: absolute; left: 0; top: 0; width: 50px; height: 207px; background: url(../images/nr-arrow-l.png) 50% 50% no-repeat; cursor: pointer;}
+.buying-con .next{ position: absolute; right: 0; top: 0; width: 50px; height: 207px; background: url(../images/nr-arrow-r.png) 50% 50% no-repeat; cursor: pointer;}
+.buying-con .prev.prevStop, .buying-con .next.nextStop{ -webkit-opacity: 0.5; -khtml-opacity: .5; -moz-opacity: .5; opacity: .5; filter: alpha(opacity=50); cursor: auto }
+
+.product-detail{ width: 980px;}
+.tab-nav{clear: both; overflow: hidden; height: 32px; border-bottom: 2px solid #d43225;}
+.tab-nav ul{ clear: both; overflow: hidden;}
+.tab-nav li{ float: left; padding-left: 24px; padding-right: 24px;     border-left: 1px solid #dfdfdf;  border-right: 1px solid #dfdfdf; border-top: 1px solid #dfdfdf; height: 31px; line-height: 30px; margin-right: -1px;}
+.tab-nav .on{background: #d43225; color: #ffffff; border-top: 1px solid #d43225;}
+.tab-nav .on a,.tab-nav .on i{color: #ffffff;}
+.tab-nav .red{ padding-left: 5px; color: #d43225;}
+
+.similar-product{ width: 150px; padding:20px 15px 60px 15px; border: 1px solid #dfdfdf;}
+.product-tit{position: relative; height: 50px; line-height: 50px;    text-align: center;}
+.product-tit h3{position: relative; z-index: 2; display: inline-block;background: #fff; padding: 0 10px; font-size: 16px; color: #888888;}
+.product-tit i{position: absolute; z-index: 1; left: 0; right: 0; top: 25px; height: 1px; border-top: 1px dashed #dfdfdf;}
+
+.product-box{position:relative;}
+.product-con{position: relative; overflow: hidden; width: 150px;}
+.product-con .pic {height: 148px; overflow: hidden;}
+.product-con .pic img { max-width: 145px; max-height: 145px; vertical-align: middle; overflow: hidden; }
+* html .product-con .pic img { width: expression(this.width > 145 && this.width > this.height ? 145:auto); height: expression(this.height > 145 ? 145:auto); }
+.product-con .pic i { height: 100%; display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; letter-spacing: normal;}
+.product-con li em{ display: block; padding: 10px 8px 4px 8px; color: #e4393c; font-family:Arial, sans-serif; font-size: 20px;}
+.product-con li em i{ font-size: 14px; padding-right: 5px;}
+.product-con li h1{ padding: 0 8px 0 8px; height: 40px; line-height: 20px; overflow: hidden; word-break: break-all; word-wrap: break-word; color: #666666;}
+.product-con li h1 a{height: 40px;overflow: hidden;}
+
+/* 购物车弹窗 */
+.cart-popup{ position: relative; width: 440px; height: 320px; background: #ffffff; border: 1px solid #dddddd;}
+.cart-popup .close{ position: absolute; top: 0; right: 0; width: 60px; height: 20px; background: url(../images/go-cart-icon2_09.png) 100% 50% no-repeat; color: #aaaaaa;}
+.cart-popup .wz1{ margin-top: 30px; margin-left: 20px; padding-left: 45px; height: 33px; line-height: 33px; background: url(../images/go-cart-icon1_05.png) 0 50% no-repeat; font-size: 16px; font-weight: 600;}
+.cart-popup .wz2{ padding-left: 60px; padding-top: 10px;}
+.cart-popup .wz2 i{ padding-left: 3px; padding-right: 3px; color: #e4393c;}
+.cart-popup .btn{margin-top: 15px; padding-left: 60px;  overflow: hidden;}
+.cart-popup .btn .submit,.cart-popup .btn .shop{display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; text-align: center;}
+.cart-popup .btn .shop { margin-left: 15px; color: #007ece; }
+.cart-popup .btn .submit { padding-left: 30px; padding-right: 30px; height: 28px; line-height: 28px; text-align: center; border: 1px solid #d43225; background: #d43225; border-radius: 3px; color: #ffffff;}
+.cart-popup .wz3{ padding-left: 60px; padding-top: 10px; padding-bottom: 10px; color: #aaaaaa;}
+.cart-popup .wz4{ margin-left: 20px; height: 30px; line-height: 30px; border-top: 1px dashed #ddd;}
+
+.cart-popup .list div i { height: 100%; }
+.pic-area .list{ margin-top: 20px; height: 66px; clear: both; overflow: hidden;}
+.pic-area .list li{ width: 66px; height: 66px;}
+.pic-min { width: 64px; height: 64px; border: 1px solid #e4e4e4; text-align: center; overflow: hidden; }
+.pic-area .list .on .pic-min{border: 1px solid #d43225;}
+.pic-min img { padding: 2px; max-width: 60px; max-height: 60px; vertical-align: middle; overflow: hidden; }
+* html .pic-min img { width: expression(this.width > 60 && this.width > this.height ? 60:auto); height: expression(this.height > 60 ? 60:auto); }

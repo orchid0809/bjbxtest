@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors tuyunkun
+ * @date    2016-07-1 9:00:00
+ * @version 列表页样式
+ */
+
+body{ background: #ffffff;}
+
+/* select 条件选择区块 */
+.select{ padding-top: 20px; background: #ffffff;}
+.you-select{ padding-left: 38px; padding-bottom: 15px; color: #777777;}
+.you-select a{ padding-left: 10px; padding-right: 10px; color: #777777;}
+.select-area{ min-height: 40px; height: auto; _height: 40px; border: 1px solid #dfdfdf;}
+.select-list{min-height: 28px; height: auto; _height: 28px; margin-top: -1px; padding-top: 6px; padding-bottom: 6px; border-top: 1px dashed #dfdfdf;}
+.select-list em,.select-list ul,.select-list li,.select-list li i{display:inline-block; *display:inline; *zoom:1; vertical-align: top; letter-spacing: normal;}
+.select-list em{ width: 90px; margin-right: 40px; height: 26px; line-height: 26px; text-align: right; color: #777777;}
+.select-list li{ padding-left: 12px; padding-right: 16px; margin-right: 15px; height: 26px; line-height: 26px;}
+.select-list .on{ border: 1px solid #d43225; background: url(../images/list-icon6.png) 100% 100% no-repeat;}
+.select-list .list1 .icon1{width: 27px; height: 26px; background: url(../images/list-icon1.png) 0 50% no-repeat;}
+.select-list .list1 .icon2{width: 27px; height: 26px; background: url(../images/list-icon2.png) 0 50% no-repeat;}
+.select-list .list1 .icon3{width: 27px; height: 26px; background: url(../images/list-icon3.png) 0 50% no-repeat;}
+.select-list .list1 .icon4{width: 27px; height: 26px; background: url(../images/list-icon4.png) 0 50% no-repeat;}
+
+/*  sorting 排序 */
+.sorting-bg{ padding-top: 24px; background: #ffffff;}
+.sorting-area{ padding: 8px 20px; height: 26px; border: 1px solid #dfdfdf; color: #666;}
+.sorting-area .num{ float: right; line-height: 26px;}
+.sorting-area .num i{ padding-left: 5px; padding-right: 5px; color: #d43225;}
+.sorting{letter-spacing:-0.34em;}
+.sorting em,.sorting ul,.sorting li,.sorting i,.sorting span,.sorting b,.sorting input,.sorting s{display:inline-block; *display:inline; *zoom:1; vertical-align: middle; letter-spacing: normal;}
+.sorting em{ padding-right: 30px; height: 26px; line-height: 26px;}
+.sorting .sorting-list{ margin-right: 20px; letter-spacing:-0.34em;}
+.sorting-list li{ margin-left: 10px; padding-left: 10px; padding-right: 10px; min-width: 40px; height: 26px; line-height: 26px; background: #dddddd; text-align: center; cursor: pointer;}
+.sorting-list li i{ margin-left: 8px; width: 7px; height: 26px; background: url(../images/list-arrow_16.png) 0 50% no-repeat;  }
+.sorting-list li:hover,.sorting-list .on{ background: #d43225; color: #ffffff;}
+.sorting-list li:hover i,.sorting-list .on i{background: url(../images/list-arrow_19.png) 0 50% no-repeat;  }
+.price-filter{ width: 50px; height: 24px; margin-left: 6px; margin-right: 6px; padding-left: 6px; padding-right: 3px; border: 1px solid #aaaaaa;}
+.price-filter b{ line-height: 24px; font-family:Arial, sans-serif;}
+.price-filter input{ border: none; background: none; margin-left: 5px; width: 36px; height: 24px; line-height: 24px; text-align: center;}
+.sorting .btn{ width: 50px; height: 24px;line-height: 24px; text-align: center; margin-left: 5px; border: 1px solid #e1e1e1; background: #f8f8f8; cursor: pointer; color: #666; font-size: 12px; }
+
+/*
+!* wares list 商品列表 *!
+.wares-area{ padding-top: 24px; background: #ffffff;}
+.wares-list{ margin-left: 5px; overflow: hidden; letter-spacing:-0.34em;}
+.wares-list li,.wares-list .pic,.wares-list .pic i{display:inline-block; *display:inline; *zoom:1; vertical-align: middle; letter-spacing: normal;}
+.wares-list .pic i{height: 100%;}
+.wares-list li{ width: 272px; margin-left: 20px; margin-bottom: 20px; }
+.wares-list .pic { width: 270px; height: 280px; border: 1px solid #e9e9e9; text-align: center; overflow: hidden; }
+.wares-list .pic img { max-width: 270px; max-height: 280px; vertical-align: middle; overflow: hidden; }
+* html .wares-list .pic img { width: expression(this.width > 270 && this.width > this.height ? 270:auto); height: expression(this.height > 280 ? 280:auto); }
+.wares-list li em{ display: block; padding: 10px 8px 8px 8px; color: #e4393c; font-family:Arial, sans-serif; font-size: 18px;}
+.wares-list li em i{ font-size: 14px; padding-right: 5px;}
+.wares-list li h1{ padding: 0 8px 8px 8px; height: 40px; line-height: 20px; overflow: hidden; word-break: break-all; word-wrap: break-word; color: #666666;}
+.wares-list li h1 a{color: #666666;}
+.wares-list li span{ display: block; padding: 0 8px 8px 8px; color: #a7a7a7; font-size: 12px;}
+.wares-list li span i{color: #005aa0; font-family: verdana;}
+*/
+
+/* wares list 商品列表 */
+.wares-area{ padding-top: 24px; background: #ffffff;}
+.wares-list{ margin-left: -19px; overflow: hidden; letter-spacing:-0.34em;}
+.wares-list li,.wares-list .pic,.wares-list .pic i{display:inline-block; *display:inline; *zoom:1; vertical-align: middle; letter-spacing: normal;}
+.wares-list .pic i{height: 100%;}
+.wares-list li{ width: 285px; margin-left: 19px; margin-bottom: 20px; -webkit-transition: border-color .1s ease; -moz-transition: border-color .1s ease; transition: border-color .1s ease;}
+.wares-list .content:hover{ border: 1px solid #e9e9e9; -webkit-box-shadow: 0 0 2px 2px #f1f1f1; -moz-box-shadow: 0 0 2px 2px #f1f1f1; box-shadow: 0 0 2px 2px #f1f1f1;}
+.wares-list .pic { position: relative; width: 285px; height: 295px; border: 1px solid #dfdfdf; text-align: center; overflow: hidden; }
+.wares-list .pic img { max-width: 285px; max-height: 295px; vertical-align: middle; overflow: hidden; }
+* html .wares-list .pic img { width: expression(this.width > 285 && this.width > this.height ? 285:auto); height: expression(this.height > 295 ? 295:auto); }
+.wares-list .content:hover .pic{ border: none;}
+.wares-list li em{ display: block; padding: 12px 8px 8px 8px; color: #e4393c; font-family:Arial, sans-serif; font-size: 20px;}
+.wares-list li em i{ font-size: 14px; padding-right: 5px;}
+.wares-list li h1{ margin-bottom: 8px; padding: 0 8px 0 8px; height: 40px; line-height: 20px; overflow: hidden; word-break: break-all; word-wrap: break-word; color: #666666;}
+.wares-list li h1 a{color: #666666;}
+.wares-list li span{ display: block; padding: 0 8px 8px 8px; color: #a7a7a7; font-size: 12px;}
+.wares-list li span i{color: #005aa0; font-family: verdana;}
+
+.wares-list .new-wares,.wares-list .snap-up{ position: absolute; bottom: 0; left: 0; right: 0; margin:auto; width:100%;}
+.wares-list .new-wares h6,.wares-list .snap-up h6{ position: relative; z-index: 3; color: #ffffff; height: 24px; line-height: 24px;}
+.wares-list .new-wares s,.wares-list .snap-up s{position: absolute; z-index: 1; bottom: 0; left: 0; right: 0; margin:auto; width:100%; height: 24px; -webkit-opacity: 0.7; -khtml-opacity: .7; -moz-opacity: .7; opacity: .7; filter: alpha(opacity=70);}
+.wares-list .new-wares s{ background: #20af0d;}
+.wares-list .snap-up s{ background: #f33939;}
+
+/* 分页样式 */
+.page-area { margin: 30px 0 30px 90px; height: 32px; overflow: hidden; clear: both; letter-spacing: -0.34em; text-align: center; }
+.page-area a, .page-area span, .page-area i, .page-area input { display: inline-block; *display: inline; zoom: 1; vertical-align: top; letter-spacing: normal; text-align: center; }
+.page-area .prev, .page-area .next { width: 66px; height: 26px; line-height: 26px; border: 1px solid #d5d5d5; margin-left: 10px; }
+.page-area .page-number a { margin-left: 10px; width: 28px; height: 26px; line-height: 26px; border: 1px solid #d5d5d5; }
+.page-area .page-number i { margin-left: 10px; }
+.page-area .page-number a.on { background: #e4393c; color: #ffffff; border: 1px solid #e4393c; }
+.page-area .textbox { margin-left: 8px; margin-right: 8px; padding-left: 10px; padding-right: 10px; width: 20px; height: 26px; line-height: 26px; border: 1px solid #c9c9c9; }
+.page-area .button { margin-left: 10px; width: 50px; height: 28px; line-height: 28px; background: #e4393c; color: #ffffff; border: 1px solid #e4393c; font-size: 14px; font-family: "Microsoft YaHei"; cursor: pointer; }
+.page-area .tj { padding-left: 10px; padding-right: 10px; height: 26px; line-height: 26px; }
+.page-area .button-area { padding-left: 10px; padding-right: 10px; height: 26px; line-height: 26px; }

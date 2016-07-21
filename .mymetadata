@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="bjbxtest"
+  id="myeclipse.1468220299025"
+  context-root="/bjbxtest"
+  j2ee-spec="6.0"
+  archive="bjbxtest.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
